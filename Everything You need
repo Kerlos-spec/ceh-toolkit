@@ -15,3 +15,26 @@ smb: \> ls
 smb: \> get flag.enc
 smb: \> exit
 :- file flag.enc( to identify encryption type)
+
+#File & Hash Extraction
+
+Decrypt hash using:
+
+https://hashes.com/en/decrypt/hash or https://crackstation.net
+
+# Steganography & Hidden Data
+Extract hidden text using Snow:
+snow.exe -C "C:\path\to\file.txt"
+
+Use OpenStego to extract from image
+
+Analyze .exe using BinText
+
+Analyze ELF binary:
+file Sample-ELF or use Ghidra
+#Dir busting-
+Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+Fuff –u http://10.10.10.10/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+For finding files
+Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt –x .html,.css,.js
+Fuff –u http://10.10.10.10/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt .e .html,.css,.js
