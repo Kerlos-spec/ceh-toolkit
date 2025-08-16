@@ -38,3 +38,39 @@ Fuff –u http://10.10.10.10/Fuzz –w  /usr/share/wordlists/dirbuster/directory
 For finding files
 Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt –x .html,.css,.js
 Fuff –u http://10.10.10.10/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt .e .html,.css,.js
+#DNS Footprinting and Enumeration 
+Dig (simple domain lookup)….example ZOntansfer.me(target website)
+•	dig zontransfer.me
+•	dig ns zontransfer.me (Name server)
+•	dig mx zontransfer.me (Mail server)
+•	dig cname zontransfer.me (cname record)
+Host We can also use Host (to map Ip address to the website with reverse lookup)
+•	host zontransfer.me
+•	host -t ns zontransfer.me
+•	host -t mx zontransfer.me
+Nslookup 
+•	nslookup zontransfer.me
+•	or
+•	nslookup 
+	set type=ns
+	zonetransfer.me
+zone transfer 
+•	to perform Zone transfer first know the name server by the above commands(host -t ns zontransfer.me) then 
+	host -l zinetransfer.me  (Name server name)that we get from the above command.
+or
+	dig axfr zonetransfer.me (@Name server name)
+Or by nslookup
+	server (Name server name)
+	set type=any
+	ls -d zonetransfer.me
+DNS brute forcing
+Install seclists
+	nmap  -p 53 --script dns-brute zonetransfer.me(domain name)
+	dnsmap zonetransfer.me -w /usr/share/scelists/Dsicovery/DNS/fierce-hostlists.txt
+	fierce –domain zonetransfer.me –subdomain-file  /usr/share/scelists/Dsicovery/DNS/fierce-hostlists.txt
+Finding Technology Stack
+Whatweb https://ceh.com/
+Passive Reconnaissance with Digital Certificates.
+	Crt.sh
+	Entrust
+	censys
