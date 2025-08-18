@@ -208,3 +208,13 @@ OR
 -/?id=4 UNION SELECT null, main FROM mains--
 OR
 sqlmap -u "http://example.com/?id=4" --dump
+#Dir busting- find directories and pages of a website.
+Vhost enumeration: find subdomains of a website.
+Dir busting-
+Gobuster dir –u http:IP –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+Fuff –u http://IP/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+For finding files
+Gobuster dir –u http:IP –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt –x .html,.css,.js
+Fuff –u http://IP/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt .e .html,.css,.js
+Vhost enumeration
+Gobuster vhost –u http://IP –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt –append-domain
