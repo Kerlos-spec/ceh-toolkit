@@ -9,12 +9,14 @@ use cat to read the file in the current dierctory
 #SSH and Telnet Enumeration
 nmap -sV -p- subnet
 hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.0.X
-ssh user@Ip
-ssh root@<target-ip>            # Login
+ssh username@Ip
+ssh username@<target-ip>            # Login
 whoami                          # Check user
 sudo -l                         # Check sudo rights
 sudo su                         # Switch to root
-find / -name file.txt         # Locate file
+find / -name file.txt         # Locate file or find . -name file.text
+or find / -name file.txt 2>/dev/null
+
 cat file.txt            # Read
 
 banner grabing
