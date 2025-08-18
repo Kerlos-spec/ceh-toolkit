@@ -62,13 +62,10 @@ ldapsearch -x -H ldap://IP
 
 Service Discovery
 Check if NFS is enabled:
-nmap -p 111 192.168.0.0/24 --open
-
-DNS enumeration:
-nslookup -type=ns www.certifiedhacker.com
+nmap -p 111 subnet --open
 
 Find SMTP service machine:
-nmap -p 25 192.168.0.0/24 --open -T5
+nmap -p 25 subnet --open -T5
 
 SMB enumeration (check message signing):
 nmap -p 445 192.168.0.X -sC -T5
