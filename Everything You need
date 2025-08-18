@@ -1,8 +1,8 @@
 Enumeration:
 FTP enumeration:
 Hydra -l username –p password ftp://IP ….we use small l if we know the user and we use capital L if we don’t know the user-
-->ftp 10.10.10.10
-ftp>get secret.txt
+->ftp Ip
+ftp>get file.txt
 
 SMB Emumeration
 Tips:- nmap -p 445,139 --open -sV subnet
