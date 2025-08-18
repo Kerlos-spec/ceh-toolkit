@@ -211,6 +211,7 @@ OR
 -/?id=4 UNION SELECT null, main FROM mains--
 OR
 sqlmap -u "http://example.com/?id=4" --dump
+OR JSQL injection tool (url with parameter ID)
 #Dir busting- find directories and pages of a website.
 Vhost enumeration: find subdomains of a website.
 Dir busting-
