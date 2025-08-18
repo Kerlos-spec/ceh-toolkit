@@ -7,8 +7,11 @@ Hydra -l username –p password ftp://IP -v ….we use small l if we know the us
 ftp>get file.txt
 use cat to read the file in the current dierctory
 #SSH and Telnet Enumeration
-nmap -sV -p- subnet
-hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.0.X
+Nmap -p 22,23,80,3389 subnet
+nmap -sS -sV -p- -O ipaddress
+telnet ip 80 and GET / HTTP/1.0
+hydra  -P pass.txt 192.168.0.1 ssh
+hydra -L /home/user.text root -P /home/rockyou.txt ssh://192.168.0.X
 ssh username@Ip
 ssh username@<target-ip>            # Login
 whoami                          # Check user
@@ -16,9 +19,7 @@ sudo -l                         # Check sudo rights
 sudo su                         # Switch to root
 find / -name file.txt         # Locate file or find . -name file.text
 or find / -name file.txt 2>/dev/null
-
 cat file.txt            # Read
-
 banner grabing
 nc <ip> 22
 #Telnet
