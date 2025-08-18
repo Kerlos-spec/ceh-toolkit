@@ -1,4 +1,4 @@
-Enumeration:
+Enumeration
 FTP enumeration:
 Hydra -l username –p password ftp://IP ….we use small l if we know the user and we use capital L if we don’t know the user-
 ->ftp Ip
@@ -9,6 +9,8 @@ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.0.X
 ssh user@Ip
 banner grabing
 nc <ip> 22
+#Telnet
+telnet ip port
 SMB Emumeration
 Tips:- nmap -p 445,139 --open -sV subnet
 :-enum4linux -a Ip
@@ -32,6 +34,45 @@ ls, we found id_rsa
 We have to make chmod 600 id_rsa to make it work. 
 Ssh -i id_rsa username@10.10.10.10
 Ls, the we can find txt file there
+#Enumeration & Reconnaissance
+Identify live machines on a subnet:
+nmap -sn 192.168.0.0/24
+
+Detect open ports:
+nmap -p- 192.168.0.X
+
+Find Domain Controller:
+nmap -p 389, 636, 88, 3268 subnet
+
+Get NetBIOS and FQDN:
+nmap -sC Ip --top-ports=20
+
+Find OpenSSH version:
+nmap -p 22 subnet --open -T5 -sV
+
+Detect OS:
+Step 1: nmap -p 3306 IP --open
+Step 2: nmap -O IP -sV -T5
+
+LDAP Enumeration (user count):
+nmap IP --script=*user*
+
+Get LDAP version:
+ldapsearch -x -H ldap://IP
+
+Service Discovery
+Check if NFS is enabled:
+nmap -p 111 192.168.0.0/24 --open
+
+DNS enumeration:
+nslookup -type=ns www.certifiedhacker.com
+
+Find SMTP service machine:
+nmap -p 25 192.168.0.0/24 --open -T5
+
+SMB enumeration (check message signing):
+nmap -p 445 192.168.0.X -sC -T5
+
 
 #File & Hash Extraction
 
