@@ -44,8 +44,15 @@ If .ssh file is there when we do ls
 Then cd .ssh
 ls, we found id_rsa
 We have to make chmod 600 id_rsa to make it work. 
-Ssh -i id_rsa username@10.10.10.10
+Ssh -i id_rsa username@Ip
 Ls, the we can find txt file there
+OR SMB enumeration
+nmap -T4 -Ss -p 139,445 - -script vuln subnet
+hydra-l henry -P /home/Desktop/rockyou.txt IP smb
+smbclient //IP/share 
+smbclient -L IP ....ls 
+get file.txt 
+cat (bct
 #Enumeration & Reconnaissance
 Identify live machines on a subnet:
 nmap -sn 192.168.0.0/24
