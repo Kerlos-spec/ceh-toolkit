@@ -10,6 +10,13 @@ use cat to read the file in the current dierctory
 nmap -sV -p- subnet
 hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.0.X
 ssh user@Ip
+ssh root@<target-ip>            # Login
+whoami                          # Check user
+sudo -l                         # Check sudo rights
+sudo su                         # Switch to root
+find / -name file.txt         # Locate file
+cat file.txt            # Read
+
 banner grabing
 nc <ip> 22
 #Telnet
