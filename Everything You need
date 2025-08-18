@@ -33,17 +33,22 @@ Ls, the we can find txt file there
 Decrypt hash using:
 
 https://hashes.com/en/decrypt/hash or https://crackstation.net
-
+#Steganography
 # Steganography & Hidden Data
+Tools: 
 Extract hidden text using Snow:
 snow.exe -C "C:\path\to\file.txt"
-
-Use OpenStego to extract from image
-
+Use OpenStego or stegoonline to extract from image
 Analyze .exe using BinText
-
 Analyze ELF binary:
 file Sample-ELF or use Ghidra
+#Cryptography
+-Hashcalc (to calculate hashes for files)
+-Veracrypt (to encrypt and decrypt disks)
+-Cracking hashes
+-BCtext Encoder
+-cryptool
+
 #Dir busting-
 Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 Fuff –u http://10.10.10.10/Fuzz –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
@@ -86,3 +91,18 @@ Passive Reconnaissance with Digital Certificates.
 	Crt.sh
 	Entrust
 	censys
+#Android 
+sudo nmap -A -O -sV 192.168.1.0/24
+•	adb connect Ip
+•	adb shell
+•	ls 
+•	cd sdcard
+•	we will get the file(it can be elf file)
+•	pwd(print working directory)
+•	exit
+•	sudo adb pull /sdcard/scan dd/ or try by omit dd
+•	ls
+•	cd /scan/
+•	ent –h
+•	ent file.elf( checks entropy)
+•	sha384shum file.elf
