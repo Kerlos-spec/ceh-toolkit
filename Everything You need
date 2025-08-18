@@ -96,13 +96,13 @@ sudo nmap -A -O -sV 192.168.1.0/24
 •	adb connect Ip
 •	adb shell
 •	ls 
-•	cd sdcard
+•	cd folder
 •	we will get the file(it can be elf file)
 •	pwd(print working directory)
 •	exit
-•	sudo adb pull /sdcard/scan dd/ or try by omit dd
+•	sudo adb pull /folder/subfolder dd/ or try by omit dd
 •	ls
-•	cd /scan/
+•	cd /subfolder/
 •	ent –h
 •	ent file.elf( checks entropy)
 •	sha384shum file.elf
