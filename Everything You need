@@ -195,6 +195,7 @@ nmap -p 9871,6703 subnet
 -tcp.flags.syn == 1 and tcp.flags.ack == 0    (How many machines) or Go to statistics IPv4 addresses--> Source and Destination ---> Then you can apply the filter given
 -tcp.flags.syn == 1   (Which machine for dos)
 -http.request.method == POST   (for passwords) or click tools ---> credentials
+-if its IOT filter by MQTT
 #SQL Injection 
 $ sqlmap -u "URL" --cookie="captured cookie of looged in user" --dbs    #for Database( to filter cookies in console document.cookie)
 $ sqlmap -u "URL" --cookie="captured cookie of looged in user" -D *DATABASE NAME* --tables #for Tables of selected Database
