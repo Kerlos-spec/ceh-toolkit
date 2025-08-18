@@ -168,10 +168,18 @@ sudo nmap -A -O -sV 192.168.1.0/24
 •	Perform string search using Bintext
 •	Identify Packaging and obfuscation methods using PEid.
 •	Analyze ELF executable file using Detect it easy(DIE)
-•	Find the Portable Executable(PE) information of a malware executable file
+•	Find the Portable Executable(PE) information of a malware executable file(PE explorer)
 (Portable Executable Scanner (pescan) (https://tzworks.net)
 Resource Hacker (http://www.angusj.com)
 PEView (https://www.aldeid.com) 
+-PEview (Windows GUI)
+-PE explorer( in windows)
+-rizin -A <filename>
+-then ie
+
+Lightweight PE file viewer.
+
+Open the .exe file, look under Optional Header → AddressOfEntryPoint.
 •	Identify file dependency using dependency walker
 •	Perform malware disassembly using (IDA pro, ollydbg, ghidra)
 •	Create a virus using JPS virus maker.
