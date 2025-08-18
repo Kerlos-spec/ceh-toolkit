@@ -48,6 +48,8 @@ file Sample-ELF or use Ghidra
 -Cracking hashes ( hashes.com and crackstation.net : Decrypt MD5, SHA1, etc)
 -BCtext Encoder (encoding and decoding text data)
 -cryptool (to encrypt and decrypt rc4 and Des etc…)
+#EOL(end of life)
+Nmap –pn –script vuln IP
 
 #Dir busting-
 Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
@@ -106,3 +108,4 @@ sudo nmap -A -O -sV 192.168.1.0/24
 •	ent –h
 •	ent file.elf( checks entropy)
 •	sha384shum file.elf
+
