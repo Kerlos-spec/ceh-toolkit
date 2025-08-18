@@ -163,4 +163,16 @@ sudo nmap -A -O -sV 192.168.1.0/24
 •	ent –h
 •	ent file.elf( checks entropy)
 •	sha384shum file.elf
+#Malware Analysis
+•	Hybrid Analysis (malware scanning)
+•	Perform string search using Bintext
+•	Identify Packaging and obfuscation methods using PEid.
+•	Analyze ELF executable file using Detect it easy(DIE)
+•	Find the Portable Executable(PE) information of a malware executable file  
+•	Identify file dependency using dependency walker
+•	Perform malware disassembly using (IDA pro, ollydbg, ghidra)
+•	Create a virus using JPS virus maker.
+•	Remote Access Trojan(RAT) njRatRat Trojan
+•	ThefRat Trojan (to create Trojan server)
+
 
