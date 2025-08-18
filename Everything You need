@@ -38,16 +38,16 @@ https://hashes.com/en/decrypt/hash or https://crackstation.net
 Tools: 
 Extract hidden text using Snow:
 snow.exe -C "C:\path\to\file.txt"
-Use OpenStego or stegoonline to extract from image
+Use OpenStego or stegonline to extract from image
 Analyze .exe using BinText
 Analyze ELF binary:
 file Sample-ELF or use Ghidra
 #Cryptography
 -Hashcalc (to calculate hashes for files)
 -Veracrypt (to encrypt and decrypt disks)
--Cracking hashes
--BCtext Encoder
--cryptool
+-Cracking hashes ( hashes.com and crackstation.net : Decrypt MD5, SHA1, etc)
+-BCtext Encoder (encoding and decoding text data)
+-cryptool (to encrypt and decrypt rc4 and Des etc…)
 
 #Dir busting-
 Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
