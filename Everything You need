@@ -161,12 +161,12 @@ Passive Reconnaissance with Digital Certificates.
 	Entrust
 	censys
 #Android 
-sudo nmap -A -O -sV 192.168.1.0/24
-•	adb connect Ip
+sudo nmap -A -O -s subnet or
+-sudo nmap -p 5555 subnet  1....4
+•	adb connect Ip port
 •	adb shell
 •	ls 
 •	cd folder
-•	we will get the file(it can be elf file)
 •	pwd(print working directory)
 •	exit
 •	sudo adb pull /folder/subfolder dd/ or try by omit dd
