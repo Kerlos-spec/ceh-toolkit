@@ -16,9 +16,8 @@ OR
 #SSH and Telnet Enumeration
 Nmap -p 22,23,80,3389 subnet
 nmap -sS -sV -p- -O ipaddress
-telnet ip 80 and GET / HTTP/1.0
-hydra  -P pass.txt 192.168.0.1 ssh
-hydra -L /home/user.text root -P /home/rockyou.txt ssh://192.168.0.X
+telnet ip 80 and GET / HTTP/1.0....6
+hydra -L /home/user.text root -P /home/rockyou.txt ssh://IP
 ssh username@Ip
 ssh username@<target-ip>            # Login
 whoami                          # Check user
@@ -130,7 +129,7 @@ file Sample-ELF or use Ghidra
 -BCtext Encoder (encoding and decoding text data)
 -cryptool (to encrypt and decrypt rc4 and Des etc…)
 #EOL(end of life)
-Nmap –pn –script vuln IP
+Nmap –pn –-script vuln IP
 
 #Dir busting-
 Gobuster dir –u http:10.10.10.10 –w  /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
