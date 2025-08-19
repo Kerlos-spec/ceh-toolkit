@@ -67,7 +67,7 @@ cat (bct
 #Enumeration & Reconnaissance
 Identify live machines on a subnet:
 nmap -sn 192.168.0.0/24
-#webserver enum
+#webserver enumeration
 namp -sV -A -p 80 subnet
 Detect open ports:
 nmap -p- 192.168.0.X
