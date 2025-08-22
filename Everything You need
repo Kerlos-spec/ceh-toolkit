@@ -63,6 +63,14 @@ smbclient //IP/share
 smbclient -L IP ....ls 
 get file.txt 
 cat (bct
+#DomainController enumeration
+nmap -sV -p 88,389,445,135,139 subnet
+nmap -p 445 --script=smb-os-discovery IP
+or Enum4linux -a ip
+0r ldapsearch -x -h ip -s base namingcontexts
+
+
+
 #Enumeration & Reconnaissance
 Identify live machines on a subnet:
 nmap -sn 192.168.0.0/24
