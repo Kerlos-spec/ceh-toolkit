@@ -1,3 +1,4 @@
+nmap [scan options] [target] -oN output.txt
 Enumeration
 #FTP enumeration:
 nmap -sS -A -T4 subnet( to check if a host has open port 23 and allows anonymous login)
