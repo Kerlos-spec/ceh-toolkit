@@ -15,6 +15,9 @@ OR
 -Hydra -L /home/username.txt –P /home/password.txt ftp://IP -v
 #mercury services
 nmap -sV -p 25,80,110,143 subnet
+#CMS
+nmap -p 80 --script http-enum targetwebsite.com
+and whatcms.org
 #SSH and Telnet Enumeration
 Nmap -p 22,23,80,3389 subnet
 nmap -sS -sV -p- -O ipaddress
