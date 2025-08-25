@@ -18,6 +18,9 @@ nmap -sV -p 25,80,110,143 subnet
 # CMS  
 nmap -p 80 --script http-enum targetwebsite.com
 and whatcms.org
+#clickjaking and CGI directories
+-nikto -h url -Tuning x
+-nikto -h url -Cgidirs all 
 #SSH and Telnet Enumeration
 Nmap -p 22,23,80,3389 subnet
 nmap -sS -sV -p- -O ipaddress
